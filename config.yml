@@ -1,0 +1,20 @@
+ignore_files:
+  - README.md
+
+rules:
+  - name: whitelist
+    terms:
+      - whitelist
+      - white-list
+    alternatives:
+      - new-suggestion
+    severity: warn
+
+  - name: blacklist
+    terms:
+      - blacklist
+      - black-list
+    alternatives:
+      - denylist
+      - blocklist
+    severity: warning

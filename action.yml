@@ -1,6 +1,6 @@
 name: 'Run woke with reviewdog'
 description: '🐶 Run woke on pull requests to detect non-inclusive language in your source code.'
-author: 'Caitlin Elfring (caitlinelfring)'
+author:
 inputs:
   github-token:
     description: 'GITHUB_TOKEN'
@@ -8,10 +8,9 @@ inputs:
   workdir:
     description: 'Working directory relative to the root directory.'
     default: '.'
-  ### Flags for reviewdog ###
   level:
     description: 'Report level for reviewdog [info,warning,error]'
-    default: 'error'
+    default: 'warning'
   reporter:
     description: 'Reporter of reviewdog command [github-pr-check,github-pr-review].'
     default: 'github-pr-check'
@@ -28,10 +27,9 @@ inputs:
   reviewdog-flags:
     description: 'Additional reviewdog flags'
     default: ''
-  ### Flags for woke ###
   woke-args:
     description: 'woke arguments'
-    default: '.'
+    default: '. -c config.yml'
     required: false
   woke-version:
     description: 'woke version, defaults to the latest `v0` version. Override to pin to a specific version'
