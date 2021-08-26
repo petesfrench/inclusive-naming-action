@@ -10,7 +10,7 @@ inputs:
     default: '.'
   level:
     description: 'Report level for reviewdog [info,warning,error]'
-    default: 'warning'
+    default: 'error'
   reporter:
     description: 'Reporter of reviewdog command [github-pr-check,github-pr-review].'
     default: 'github-pr-check'
@@ -29,7 +29,7 @@ inputs:
     default: ''
   woke-args:
     description: 'woke arguments'
-    default: '. -c config.yml'
+    default: '. -c /home/runner/work/_actions/petesfrench/inclusive-naming-action/master/config.yml'
     required: false
   woke-version:
     description: 'woke version, defaults to the latest `v0` version. Override to pin to a specific version'
